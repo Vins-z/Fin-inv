@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Powered Portfolio Optimizer</h1>
+        
+        <div class="input-section">
+            <input type="text" id="symbols" placeholder="AAPL, MSFT, GOOGL...">
+            <select id="strategy">
+                <option value="sharpe">Max Sharpe</option>
+                <option value="ml">Machine Learning</option>
+            </select>
+            <button onclick="optimize()">Optimize</button>
+        </div>
+        
+        <div class="results">
+            <div class="chart-container">
+                <canvas id="portfolioChart"></canvas>
+            </div>
+            <div class="metrics">
+                <h3>Performance Metrics</h3>
+                <div id="sharpeRatio"></div>
+                <div id="returns"></div>
+                <div id="volatility"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
